@@ -27,10 +27,10 @@ export function AppHeader() {
                                 />
                             </div>
                         </div>
-                        <div><a href="#welcome-section">Welcome</a></div>
-                        <div><a href="#stack-section">Tech stack</a></div>
-                        <div><a href="#project-section">Projects</a></div>
-                        <div><a href="#contact-section">Contact</a></div>
+                        <div><a onClick={()=> setActiveClass('')} href="#welcome-section">Welcome</a></div>
+                        <div><a onClick={()=> setActiveClass('')} href="#stack-section">Tech stack</a></div>
+                        <div><a onClick={()=> setActiveClass('')} href="#project-section">Projects</a></div>
+                        <div><a onClick={()=> setActiveClass('')} href="#contact-section">Contact</a></div>
                     </nav>
                     <div className="fa-container open">
                         <div className="fa open">
