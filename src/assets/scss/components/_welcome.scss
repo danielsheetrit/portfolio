@@ -1,0 +1,87 @@
+.welcome {
+    .hero-main {
+        width: 100%;
+        justify-content: space-between;
+        margin-block-start: rem(170px);
+        margin-block-end: rem(90px);
+    }
+    .hero-txt-container {
+        h1 {
+            font-size: rem(60px);
+        }
+        p {
+            font-size: rem(18px);
+            margin-block-start: rem(30px);
+        }
+        .seperator {
+            margin-block-start: rem(30px);
+        }
+        button {
+            width: rem(200px);
+            font-family: $ge;
+            font-size: rem(14px);
+            border-radius: rem(8px);
+            color: $clr1;
+            border: none;
+            padding: 1rem;
+            margin-block-start: rem(75px);
+            box-shadow: 0px 0px 5px #4b00e07e;
+            @include bluish-gradient;
+        }
+    }
+
+    .hero-img-container {
+        background: url(../../img/welcome/square-hero.svg) no-repeat;
+        width: rem(450px);
+        height: rem(450px);
+        background-color: transparent;
+    }
+
+    //media
+    @media (max-width: $normal-breakpoint) {
+        .hero-img-container {
+            width: rem(400px);
+            height: rem(400px);
+        }
+    }
+
+    @media (max-width: $narrow-breakpoint) {
+        .hero-main {
+            flex-direction: column;
+            align-items: center;
+            margin-block-start: rem(150px);
+        }
+        .hero-img-container {
+            margin-block-start: rem(75px);
+        }
+        .hero-txt-container {
+            flex-direction: column;
+            text-align: center;
+            div {
+                align-items: center;
+            }
+            button {
+                width: rem(275px);
+            }
+        }
+    }
+    @media (max-width: $mobile-breakpoint) {
+        .hero-txt-container {
+            h1 {
+                font-size: rem(48px);
+            }
+            p {
+                font-size: rem(18px);
+            }
+            button {
+                width: rem(250px);
+            }
+        }
+    }
+    @media (max-width: 460px) {
+        .hero-img-container {
+            width: rem(300px);
+            height: rem(300px);
+        }
+    }
+}

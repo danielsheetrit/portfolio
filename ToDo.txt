@@ -1,0 +1,6 @@
+- css animation running text
+
+* margins: 
+between sections - 90px
+between containers - 75px
+betweem elements - 30px

@@ -1,0 +1,103 @@
+.contact {
+    background-color: $clr2;
+    color: $clr1;
+
+    > div {
+        margin-block-start: rem(90px);
+        margin-block-end: rem(90px);
+    }
+
+    .contact-header {
+        h1 {
+            font-size: rem(48px);
+        }
+        p {
+            margin-block-start: rem(30px);
+        }
+        .seperator-yellow {
+            margin-block-start: rem(30px);
+        }
+        a {
+            display: inline-block;
+            margin-block-start: 1rem;
+            margin-inline-end: 1rem;
+            color: $clr1;
+        }
+    }
+
+    .form-container {
+        margin-block-start: rem(75px);
+
+        form {
+            width: rem(550px);
+            > div:not(:first-child):not(:last-child) {
+                margin-block-start: 1rem;
+            }
+            input,
+            textarea {
+                display: block;
+                width: 100%;
+                padding: rem(8px) rem(16px);
+                line-height: rem(25px);
+                font-size: rem(14px);
+                font-family: inherit;
+                border-radius: rem(8px);
+                -webkit-appearance: none;
+                color: $clr3;
+                border: 1px solid $clr4;
+                background: $clr1;
+                transition: border 0.3s ease;
+                margin-block-start: rem(8px);
+                &::placeholder {
+                    color: $clr3;
+                }
+                &:focus {
+                    outline: none;
+                    border-color: $clr3;
+                }
+            }
+            .submit-btn-container {
+                margin-block-start: rem(45px);
+                button {
+                    transition: all .5s ease;
+                    border: none;
+                    border-radius: rem(8px);
+                    background-color: $clr1;
+                    color: $clr3;
+                    font-size: rem(14px);
+                    font-family: inherit;
+                    width: rem(200px);
+                    padding: rem(8px) rem(16px);
+                    margin-inline-end: 1rem;
+                    outline: none;
+                }
+            }
+        }
+    }
+
+    @media (max-width: $narrow-breakpoint) {
+        .contact-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .form-container {
+            display: flex;
+            justify-content: center;
+        }
+    }
+    @media (max-width: $mobile-breakpoint) {
+        .form-container {
+            form {
+                width: 100%;
+                .submit-btn-container {
+                    button {
+                        width: 50%;
+                    }  
+                }
+            }
+            
+        }
+    }
+}

@@ -1,0 +1,28 @@
+body {
+    position: relative;
+    .shape4-green {
+        z-index: -1;
+        position: absolute;
+        width: rem(600px);
+        height: rem(600px);
+        
+        right: rem(215px);
+        top:  rem(1180px);
+        background: url(../../img/decorations/shape4-green/shape4-green.svg) no-repeat;
+
+        @media (max-width: $normal-breakpoint) {
+            width: rem(500px);
+            width: rem(500px);
+            right: rem(50px);
+            top:  rem(1850px);
+        }
+        @media (max-width: $narrow-breakpoint) {
+            top:  rem(2450px);
+        }
+        @media (max-width: $mobile-breakpoint) {
+            width: rem(400px);
+            width: rem(400px);
+        }
+    }
+
+}

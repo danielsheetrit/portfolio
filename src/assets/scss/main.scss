@@ -1,0 +1,23 @@
+//import setup
+@import "./setup/variables";
+@import "./setup/functions";
+@import "./setup/typography";
+@import "./setup/mixins";
+
+//import basics
+@import "./basics/base";
+@import "./basics/helpers";
+@import "./basics/layout";
+@import "./basics/buttons";
+@import "./basics/on-scroll";
+
+//components
+@import "./components/app-header";
+@import "./components/projects";
+@import "./components/stack";
+@import "./components/contact";
+@import "./components/welcome";
+
+//decorations
+@import "./decorations/welcome-decorations";
+@import "./decorations/projects-decorations";

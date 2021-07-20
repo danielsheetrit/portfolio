@@ -1,0 +1,107 @@
+/* Breakpoint mixins */
+
+@mixin for-mobile-layout {
+    @media (max-width: $mobile-breakpoint) {
+        @content;
+    }
+}
+
+@mixin for-narrow-layout {
+    @media (min-width: $mobile-breakpoint) {
+        @content;
+    }
+}
+
+@mixin for-normal-layout {
+    @media (min-width: $narrow-breakpoint) {
+        @content;
+    }
+}
+
+/* Media  Mixins */
+@mixin aspect-ratio($width, $height) {
+    position: relative;
+    overflow: hidden;
+    &::before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: ($height / $width) * 100%;
+    }
+    > * {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    > img {
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+// Mixin for removing hover efects on iphone screen
+@mixin hover-supported {
+    @media not all and (pointer: coarse) {
+        &:hover {
+            @content;
+        }
+    }
+}
+
+@mixin bluish-gradient {
+    background: #4a00e0; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #8e2de2, #4a00e0); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #8e2de2, #4a00e0);
+}
+
+@mixin seperators {
+    width: rem(50px);
+    height: rem(5px);
+    border-radius: rem(8px);
+}
+
+@mixin become-hamburger {
+    .fa-container.open {
+        display: block;
+        padding: 0;
+        .fa {
+            width: rem(40px);
+            height: rem(40px);
+        }
+    }
+
+    nav {
+        flex-direction: column;
+        background-color: $clr3;
+        position: fixed;
+        height: 100vh;
+        width: 33vw;
+        z-index: 100;
+        top: 0;
+        right: -18rem;
+        box-shadow: $bs;
+
+        .fa-container.close {
+            display: block;
+        }
+        div {
+            margin-inline-start: 0;
+            width: 100%;
+        }
+        a {
+            color: $clr1;
+            width: 100%;
+        }
+        &.active {
+            right: 0;
+        }
+    }
+}
+
+@mixin square250 {
+    width: rem(250px);
+    height: rem(250px);
+}

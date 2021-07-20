@@ -1,0 +1,62 @@
+header {
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+    background-color: transparent;
+    padding: .7rem 0;
+    transition: all .1s ease;
+
+    .fa-container {
+        display: block;
+        padding: rem(12px) 0 0 rem(8px);
+    }
+    .fa {
+        width: rem(46px);
+        height: rem(46px);
+        & img:hover {
+            cursor: pointer;
+        }
+    }
+    .fa-container.open {
+        display: none;
+    }
+    .fa-container.close {
+        display: none;
+    }
+
+    nav {
+        transition: all 0.3s ease;
+        div {
+            &::after {
+                content: "";
+                width: 0%;
+                height: 0.125rem;
+                background-color: $clr3;
+                display: block;
+                margin: auto;
+                transition: all 0.3s ease;
+            }
+            &:hover::after {
+                width: 75%;
+            }
+        }
+        a {
+            padding: 1rem;
+            display: inline-block;
+            font-size: rem(14px);
+        }
+    }
+
+    .logo-container {
+        max-width: rem(125px);
+        img {
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    @media (max-width: $narrow-breakpoint) {
+        @include become-hamburger;
+    }
+}

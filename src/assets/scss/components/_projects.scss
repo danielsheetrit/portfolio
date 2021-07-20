@@ -1,0 +1,106 @@
+.projects {
+    > div {
+        margin-block-start: rem(90px);
+        margin-block-end: rem(90px);
+    }
+
+    .projects-header {
+        h1 {
+            font-size: rem(48px);
+        }
+        p {
+            margin-block-start: rem(30px);
+        }
+        .seperator {
+            margin-block-start: rem(30px);
+        }
+    }
+
+    article {
+        margin-block-start: rem(75px);
+        .img-side {
+            width: 100%;
+            height: rem(350px);
+            background: url(../../img/projects/homie-undraw.svg) no-repeat;
+            margin-inline-end: rem(30px);
+        }
+        .projects-btn-group {
+            
+            margin-block-start: rem(30px);
+            button {
+                transition: all .3s ease;
+                border: none;
+                padding: rem(7.2px) rem(12px);
+                background-color: $clr2;
+                font-size: rem(14px);
+                font-family: $mr;
+                color: #a6beff;
+                &.active {
+                    color: $clr1;
+                }
+            }
+            .left-btn {
+                border-top-left-radius: rem(8px);
+                border-bottom-left-radius: rem(8px);
+            }
+            .right-btn {
+                border-top-right-radius: rem(8px);
+                border-bottom-right-radius: rem(8px);
+            }
+        }
+        .desc-side {
+            width: 100%;
+            background-color: $clr4;
+            padding: 1rem;
+            border-radius: 8px;
+            p {
+                width: 90%;
+                margin-block-start: 1rem;
+                font-size: rem(14px);
+                font-family: $ml;
+            }
+            a {
+                margin-block-start: rem(30px);
+                background-color: $clr2;
+                padding: rem(12px);
+                border-radius: rem(8px);
+                font-size: rem(14px);
+                color: $clr1;
+            }
+        }
+    }
+
+    @media (max-width: $narrow-breakpoint) {
+        .projects-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        article {
+            flex-direction: column;
+            justify-content: center;
+            .img-side {
+                width: rem(450px);
+                height: rem(350px);
+                margin-inline-end: rem(0px);
+            }
+            .desc-side {
+                margin-block-start: rem(75px);
+                width: 70%;
+            }
+        }
+    }
+    @media (max-width: $mobile-breakpoint) {
+        article {
+            .img-side {
+                width: rem(310px);
+                height: rem(225px);
+            }
+            .desc-side {
+                margin-block-start: rem(75px);
+                width: 100%;
+            }
+        }
+    }
+}

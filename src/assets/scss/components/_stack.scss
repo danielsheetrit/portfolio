@@ -1,0 +1,102 @@
+.stack {
+    background-color: $clr2;
+    color: $clr1;
+
+    > div {
+        margin-block-start: rem(90px);
+        margin-block-end: rem(90px);
+    }
+
+    .stack-header {
+        z-index: 10;
+        h1 {
+            font-size: rem(48px);
+        }
+        p {
+            width: rem(275px);
+            margin-block-start: rem(30px);
+        }
+        .seperator-yellow {
+            margin-block-start: rem(30px);
+        }
+    }
+
+    .stack-main {
+        margin-block-start: rem(75px);
+    }
+
+    article {
+        width: rem(250px);
+        p {
+            margin-block-start: 1rem;
+            font-size: rem(14px);
+            font-family: $ml;
+        }
+        > div {
+            margin-block-start: rem(30px);
+            @include square250;
+        }
+        .design-img {
+            background: url(../../img/stack/design.svg) no-repeat;
+        }
+        .frontend-img {
+            background: url(../../img/stack/front-end.svg) no-repeat;
+        }
+        .backend-img {
+            background: url(../../img/stack/back-end.svg) no-repeat;
+        }
+    }
+
+    @media (max-width: $normal-breakpoint) {
+        .stack-main {
+            margin-block-start: rem(0px);
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        article {
+            width: 100%;
+            display: flex;
+            margin-block-start: rem(75px);
+            align-items: center;
+            justify-content: space-between;
+            p {
+                width: 30%;
+                margin-block-start: rem(0px);
+            }
+            img {
+                margin-block-start: rem(0px);
+            }
+        }
+    }
+
+    @media (max-width: $narrow-breakpoint) {
+        .stack-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        article {
+            flex-direction: column;
+            text-align: center;
+            > * {
+                margin-right: rem(0px);
+            }
+            p {
+                width: 50%;
+                margin-block-start: rem(30px);
+            }
+            img {
+                margin-block-start: rem(30px);
+            }
+        }
+    }
+
+    @media (max-width: $mobile-breakpoint) {
+        article {
+            p {
+                width: 80%;
+            }
+        }
+    }
+}

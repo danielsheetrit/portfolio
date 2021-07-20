@@ -1,0 +1,77 @@
+body {
+    position: relative;
+    .shape1-green {
+        position: absolute;
+        z-index: -1;
+        opacity: 0.9;
+
+        background: url(../../img/decorations/shape1-green/shape1-green-noraml.svg) no-repeat;
+        right: 0;
+        width: rem(850px);
+        height: rem(750px);
+    }
+
+    .shape2-green {
+        position: absolute;
+        z-index: -1;
+        opacity: 0.9;
+
+        background: url(../../img/decorations/shape2-green/shape2-green.svg) no-repeat;
+        left: rem(0px);
+        top: rem(200px);
+        width: rem(300px);
+        height: rem(600px);
+    }
+
+    .shape3-green {
+        position: absolute;
+        z-index: -1;
+        opacity: 0.9;
+
+        background: url(../../img/decorations/shape3-green/shape3-green.svg) no-repeat;
+        left: rem(550px);
+        top: rem(600px);
+        width: rem(300px);
+        height: rem(250px);
+    }
+
+    @media (max-width: $normal-breakpoint) {
+        .shape1-green {
+            width: rem(600px);
+        }
+        .shape3-green {
+            top: rem(550px);
+            left: rem(350px);
+        }
+    }
+    @media (max-width: $narrow-breakpoint) {
+        .shape1-green {
+            background: url(../../img/decorations/shape1-green/shape1-green-narrow.svg) no-repeat;
+            width: rem(350px);
+        }
+        .shape2-green {
+            width: rem(250px);
+            height: rem(500px);
+            top: rem(650px);
+        }
+        .shape3-green {
+            top: rem(325px);
+            left: rem(200px);
+        }
+    }
+    @media (max-width: $mobile-breakpoint) {
+        .shape1-green {
+            width: rem(225px);
+        }
+        .shape2-green {
+            width: rem(225px);
+            top: rem(750px);
+        }
+        .shape3-green {
+            width: rem(250px);
+            height: rem(200px);
+            top: rem(325px);
+            left: rem(15px);
+        }
+    }
+}
