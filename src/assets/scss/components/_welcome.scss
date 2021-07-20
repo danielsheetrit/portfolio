@@ -16,11 +16,12 @@
         .seperator {
             margin-block-start: rem(30px);
         }
-        button {
+        a {
             width: rem(200px);
             font-family: $ge;
             font-size: rem(14px);
             border-radius: rem(8px);
+            text-align: center;
             color: $clr1;
             border: none;
             padding: 1rem;

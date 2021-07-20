@@ -10,7 +10,7 @@ export function Welcome() {
                                 I'm a web developer, passionate about <br /> design and coding, and I love what I do.
                                 <br /> scroll down to know more. </p>
                             <div className="seperator"></div>
-                            <button>Contact Me!</button>
+                            <a href="#contact-section">Contact Me!</a>
                         </div>
                     </div>
                     <div className="hero-img-container"></div>
