@@ -20,8 +20,10 @@
         a {
             display: inline-block;
             margin-block-start: 1rem;
-            margin-inline-end: 1rem;
             color: $clr1;
+        }
+        a:first-of-type {
+            margin-inline-end: 1rem;
         }
     }
 
