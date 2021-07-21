@@ -67,7 +67,7 @@ export function Contact() {
                                 id="name-s"
                                 type="text"
                                 name="name"
-                                placeholder="You'r name"
+                                placeholder="What's your name?"
                                 value={name}
                                 onChange={handleChange}
                             />
@@ -78,7 +78,7 @@ export function Contact() {
                                 id="email-s"
                                 type="email"
                                 name="email"
-                                placeholder="You'r email"
+                                placeholder="Email to get back to..."
                                 value={email}
                                 onChange={handleChange}
                             />
@@ -89,7 +89,7 @@ export function Contact() {
                                 id="msg-s"
                                 type="text"
                                 name="msg"
-                                placeholder="You'r message"
+                                placeholder="Tell me something..."
                                 value={msg}
                                 onChange={handleChange}
                             />

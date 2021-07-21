@@ -18,8 +18,8 @@ export function Projects() {
                     <div className="img-side"></div>
                     <div className="desc-side flex column">
                         <h2>Homie</h2>
-                        <p>This is wide end2end project, <br />
-                            MVC and CRUD Methods included,<br />
+                        <p>A "MERN" application, clone for Airbnb,<br />
+                            very big and wide end2end project,<br />
                             fully responsive in any device. <br />
                         </p>
                         <div className="projects-btn-group">
